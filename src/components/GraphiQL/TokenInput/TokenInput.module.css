@@ -1,0 +1,25 @@
+.main {
+  align-items: center;
+  background-color: var(--zh-theme-color-bg-30);
+  display: flex;
+  padding: var(--zh-gutter-md) var(--zh-gutter-ml);
+}
+
+.label {
+  align-items: baseline;
+  display: flex;
+}
+
+.labelText {
+  white-space: nowrap;
+}
+
+.input {
+  margin-left: var(--zh-gutter-md);
+  padding: var(--zh-gutter-sm);
+  width: 350px;
+}
+
+.button {
+  margin-left: var(--zh-gutter-lg);
+}
