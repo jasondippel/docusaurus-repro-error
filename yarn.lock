@@ -4178,7 +4178,7 @@ graphql-language-service@^5.0.4:
     nullthrows "^1.0.0"
     vscode-languageserver-types "^3.15.1"
 
-graphql-ws@^5.8.2:
+graphql-ws@5.8.2:
   version "5.8.2"
   resolved "https://registry.yarnpkg.com/graphql-ws/-/graphql-ws-5.8.2.tgz#800184b1addb20b3010dc06cb70877703a5fff20"
   integrity sha512-hYo8kTGzxePFJtMGC7Y4cbypwifMphIJJ7n4TDcVUAfviRwQBnmZAbfZlC+XFwWDUaR7raEDQPxWctpccmE0JQ==
