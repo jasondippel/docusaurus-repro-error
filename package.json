@@ -3,7 +3,7 @@
   "name": "developer-website",
   "version": "0.0.0",
   "scripts": {
-    "build": "docusaurus build",
+    "build": "docusaurus build --no-minify",
     "clear": "docusaurus clear",
     "deploy": "docusaurus deploy",
     "docusaurus": "docusaurus",

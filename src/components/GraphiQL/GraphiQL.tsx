@@ -1,14 +1,12 @@
-import React, { useState } from 'react';
+import React from 'react';
 import GraphiQLCore from 'graphiql';
 import { createGraphiQLFetcher } from '@graphiql/toolkit';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
-import TokenInput from './TokenInput';
-import Placeholder from './Placeholder';
 
 import 'graphiql/graphiql.min.css';
 
 const GraphiQL = () => {
-  const [token, setToken] = useState('');
+  const token = '1234';
   const {
     siteConfig: {
       customFields: { graphqlUrl, githubToken, authToken },
@@ -34,24 +32,13 @@ const GraphiQL = () => {
     url: graphqlUrl as string,
     headers: {
       ['X-GitHub-Token']: githubToken as string,
-      ['X-Zh-Auth-Token']: authToken as string,
+      ['X-Auth-Token']: authToken as string,
       ['Authorization']: `Bearer ${token}`,
     },
   });
 
   return (
-    <div>
-      <TokenInput savedTokenValue={token} setTokenValue={setToken} />
-      <div>
-        {Boolean(token) ? (
-          <GraphiQLCore
-            fetcher={fetcher}
-          />
-        ) : (
-          <Placeholder />
-        )}
-      </div>
-    </div>
+    <GraphiQLCore fetcher={fetcher} />
   );
 };
 
